@@ -1,0 +1,16 @@
+<h2>Create</h2>
+<% if (typeof error !== 'undefined') { %>
+    <p style="color: red;"><%= error %></p>
+<% } %>
+<form action="/poll/create" method="POST">
+    <label for="title">Question:</label>
+    <input type="text" id="title" name="title" required>
+    
+    <label for="option1">Option 1:</label>
+    <input type="text" id="option1" name="options[]" required>
+    
+    <label for="option2">Option 2:</label>
+    <input type="text" id="option2" name="options[]" required>
+    
+    <button type="submit">Create Poll</button>
+</form>
