@@ -1,5 +1,4 @@
 document.getElementById('add-option-button').addEventListener('click', function() {
-    console.log('Button clicked');
     const optionsContainer = document.getElementById('options-container');
     const optionCount = optionsContainer.children.length / 2 + 1;
     

@@ -2,6 +2,7 @@ if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
 }
 
+
 const cors = require('cors');
 const path = require('path');
 
@@ -9,6 +10,9 @@ const express = require('express');
 const app = express();
 const expressLayouts = require('express-ejs-layouts');
 const bodyParser = require('body-parser');
+
+// Serve static files from the "public" directory
+app.use("/public", express.static("public"));
 
 const indexRouter = require('./routes/index');
 const accountRouter = require('./routes/account');
